@@ -24,8 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function getUsers() {
     let userInput = document.querySelector("#userDrop")
-    let results = document.querySelector("#results")
-    console.log(userInput.value)
+    
 
     let newString = ("http://localhost:8083/api/todos/byuser/").concat(userInput.value)
     console.log(newString)
@@ -38,7 +37,19 @@ async function getUsers() {
         let data = await reponse.json();
         console.log(data)
 
-        results.innerHTML = JSON.stringify(data)
+        let filteredData = data.map(user => ({
+            category: user.category,
+            description: user.description,
+            completed: user.completed
+        }));
+
+        let results = document.getElementById(`results`)
+        results.innerHTML = ""
+        filteredData.forEach(user => {
+            let dataDiv = document.createElement(`div`);
+            dataDiv.innerHTML = `<strong>Category</strong>: ${user.category}<br>Description: ${user.description}<br> Have completed? ${user.completed}`;
+            results.appendChild(dataDiv)
+          });
 
 
 
