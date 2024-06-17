@@ -8,7 +8,7 @@ window.onload = () => {
     populate(usernameDDL, "username", "id", "http://localhost:8083/api/users");
     populate(categoryDDL, "name", "name", "http://localhost:8083/api/categories");
 
-    newTodoForm.addEventListener("submit", (event) => someFn(event));
+    newTodoForm.addEventListener("submit", (event) => addTodo(event));
 }
 
 async function getData(url) {
@@ -31,7 +31,7 @@ async function populate(dropdown, textContentKey, valueKey, url) {
     })
 }
 
-async function someFn(event) {
+async function addTodo(event) {
     event.preventDefault();
 
     const myForm = event.target;
