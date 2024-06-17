@@ -8,19 +8,28 @@
 </head>
 
 <body>
-    <form id="newTodoForm">
-        <select name="usernames" id="usernameDDL">
+    <form id="newTodoForm" autocomplete="off">
+        <select name="userid" id="usernameDDL" required>
             <option value="">-- Select a username --</option>
         </select>
-        <select name="categories" id="categoryDDL">
+        <select name="category" id="categoryDDL" required>
             <option value="">-- Select a category --</option>
         </select>
-        <select name="urgency" id="urgencyDDL">
-            <option value="">-- Select an urgency level --</option>
+        <select name="priority" id="priorityDDL" required>
+            <option value="">-- Select an priority level --</option>
             <option value="Low">Low</option>
             <option value="Medium">Medium</option>
             <option value="High">High</option>
         </select>
+
+        <div>
+            <label for="description">Enter a description:</label>
+            <textarea name="description" id="newTodoDescription" required></textarea>
+        </div>
+        <label for="deadline">Enter a deadline:</label>
+        <input type="text" name="deadline" placeholder="YYYY-MM-DD" id="newTodoDeadline" required>
+
+        <button>ADD ToDo</button>
     </form>
 
     <script src="./scripts/new_todos.js"></script>
