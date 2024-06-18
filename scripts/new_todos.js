@@ -9,6 +9,7 @@ window.onload = () => {
     populate(categoryDDL, "name", "name", "http://localhost:8083/api/categories");
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     newTodoForm.addEventListener("submit", (event) => addTodo(event));
 =======
 <<<<<<< HEAD
@@ -16,6 +17,9 @@ window.onload = () => {
 =======
     newTodoForm.addEventListener("submit", (event) => addTodo(event));
 >>>>>>> 106bae6561a9cfefc3bc00e9054e14a2178b5095
+>>>>>>> Stashed changes
+=======
+    newTodoForm.addEventListener("submit", (event) => addTodo(event));
 >>>>>>> Stashed changes
 }
 
@@ -40,6 +44,7 @@ async function populate(dropdown, textContentKey, valueKey, url) {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 async function addTodo(event) {
 =======
 <<<<<<< HEAD
@@ -47,6 +52,9 @@ async function someFn(event) {
 =======
 async function addTodo(event) {
 >>>>>>> 106bae6561a9cfefc3bc00e9054e14a2178b5095
+>>>>>>> Stashed changes
+=======
+async function addTodo(event) {
 >>>>>>> Stashed changes
     event.preventDefault();
 

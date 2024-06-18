@@ -25,8 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function getUsers() {
     let userInput = document.querySelector("#userDrop")
-    let results = document.querySelector("#results")
-    console.log(userInput.value)
+    
 
     let newString = ("http://localhost:8083/api/todos/byuser/").concat(userInput.value)
     console.log(newString)
