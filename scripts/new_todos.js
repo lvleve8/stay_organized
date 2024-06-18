@@ -8,7 +8,15 @@ window.onload = () => {
     populate(usernameDDL, "username", "id", "http://localhost:8083/api/users");
     populate(categoryDDL, "name", "name", "http://localhost:8083/api/categories");
 
+<<<<<<< Updated upstream
     newTodoForm.addEventListener("submit", (event) => addTodo(event));
+=======
+<<<<<<< HEAD
+    newTodoForm.addEventListener("submit", (event) => someFn(event));
+=======
+    newTodoForm.addEventListener("submit", (event) => addTodo(event));
+>>>>>>> 106bae6561a9cfefc3bc00e9054e14a2178b5095
+>>>>>>> Stashed changes
 }
 
 async function getData(url) {
@@ -31,7 +39,15 @@ async function populate(dropdown, textContentKey, valueKey, url) {
     })
 }
 
+<<<<<<< Updated upstream
 async function addTodo(event) {
+=======
+<<<<<<< HEAD
+async function someFn(event) {
+=======
+async function addTodo(event) {
+>>>>>>> 106bae6561a9cfefc3bc00e9054e14a2178b5095
+>>>>>>> Stashed changes
     event.preventDefault();
 
     const myForm = event.target;
