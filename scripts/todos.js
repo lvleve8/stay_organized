@@ -47,7 +47,7 @@ async function getUsers() {
         results.innerHTML = ""
         filteredData.forEach(user => {
             let dataDiv = document.createElement(`div`);
-            dataDiv.innerHTML = `<strong>Category</strong>: ${user.category}<br>Description: ${user.description}<br> Have completed? ${user.completed}`;
+            dataDiv.innerHTML = `<strong>Category</strong>: ${user.category}<br>Description: ${user.description}<br> <strong>Completed:</strong> ${user.completed ? '<img src="https://via.placeholder.com/15/00FF00/FFFFFF?text=X" alt="Completed">' : '<img src="https://via.placeholder.com/15/FF0000/FFFFFF?text=X" alt="Not Completed">'}`;;
             results.appendChild(dataDiv)
           });
 
