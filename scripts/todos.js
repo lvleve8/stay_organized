@@ -40,14 +40,16 @@ async function getUsers() {
         let filteredData = data.map(user => ({
             category: user.category,
             description: user.description,
+            deadline: user.deadline,
             completed: user.completed
+
         }));
 
         let results = document.getElementById(`results`)
         results.innerHTML = ""
         filteredData.forEach(user => {
             let dataDiv = document.createElement(`div`);
-            dataDiv.innerHTML = `<strong>Category</strong>: ${user.category} <strong>Description:</strong> ${user.description} <strong>Completed:</strong> ${user.completed ? '<img src="https://via.placeholder.com/15/00FF00/FFFFFF?text=X" alt="Completed">' : '<img src="https://via.placeholder.com/15/FF0000/FFFFFF?text=X" alt="Not Completed">'}`;;
+            dataDiv.innerHTML = `<strong>Category</strong>: ${user.category} <strong>Description:</strong> ${user.description} <strong>Deadline:</strong> ${user.deadline} <strong>Completed:</strong> ${user.completed ? '<img src="https://via.placeholder.com/15/00FF00/FFFFFF?text=X" alt="Completed">' : '<img src="https://via.placeholder.com/15/FF0000/FFFFFF?text=X" alt="Not Completed">'}`;;
             results.appendChild(dataDiv)
           });
 
