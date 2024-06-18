@@ -1,7 +1,5 @@
 "use strict"
-<<<<<<< Updated upstream
 console.log("hi lazy team")
-=======
 document.addEventListener('DOMContentLoaded', () => {
     const dropdown = document.getElementById('userDrop');
     const apiUrl = 'http://localhost:8083/api/users'; 
@@ -73,4 +71,3 @@ let users = await getUsers()
         theDropdown.appendChild(newOption)
 });
 }
->>>>>>> Stashed changes
