@@ -24,11 +24,10 @@ const registerNewUser = async (event) => {
             });
             const data = await response.json();
 
-            const errorResponse = data.error;
-            if (errorResponse) {
-                alert(`${errorResponse}`);
+            if (response.ok) {
+                alert("Success! New user added");
             } else {
-                console.log(data);
+                alert(`${data.error}`);
             }
         } catch (error) {
             console.log("uh oh", error);

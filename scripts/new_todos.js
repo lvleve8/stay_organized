@@ -46,5 +46,7 @@ async function addTodo(event) {
     });
 
     let data = await response.json();
-    console.log(data);
+    if (response.ok) {
+        alert(`Success! New ToDo added for user: ${myForm.userid[myForm.userid.selectedIndex].textContent}`);
+    }
 }
